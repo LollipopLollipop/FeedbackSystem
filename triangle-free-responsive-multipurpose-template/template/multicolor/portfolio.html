@@ -22,6 +22,19 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <style>
+	.criteria-img { 
+	   position: relative; 
+	   width: 100%; /* for IE 6 */
+	}
+	
+	.criteria-text { 
+	   position: absolute; 
+	   text-align:center; 
+	   top: 100px; 
+	   width: 100%; 
+	}
+	</style>
 </head><!--/head-->
 
 <body>
@@ -114,8 +127,8 @@
                 <div class="row">
                     <div class="action">
                         <div class="col-sm-12">
-                            <h1 class="title">Portfolio</h1>
-                            <p>Be Creative</p>
+                            <h1 class="title">Presenter Defined Tags</h1>
+                            <p>Be Attentive</p>
                         </div>
                     </div>
                 </div>
@@ -127,32 +140,28 @@
     <section id="portfolio">
         <div class="container">
             <div class="row">
-                <ul class="portfolio-filter text-center">
-                    <li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
-                    <li><a class="btn btn-default" href="#" data-filter=".branded">Branded</a></li>
-                    <li><a class="btn btn-default" href="#" data-filter=".design">Design</a></li>
-                    <li><a class="btn btn-default" href="#" data-filter=".folio">Folio</a></li>
-                    <li><a class="btn btn-default" href="#" data-filter=".logos">Logos</a></li>
-                    <li><a class="btn btn-default" href="#" data-filter=".mobile">Mobile</a></li>
-                    <li><a class="btn btn-default" href="#" data-filter=".mockup">Mockup</a></li>
-                </ul><!--/#portfolio-filter-->
+                <br>
+                <br>
                     
                 <div class="portfolio-items">
                     <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded logos">
                         <div class="portfolio-wrapper">
                             <div class="portfolio-single">
-                                <div class="portfolio-thumb">
-                                    <img src="images/portfolio/1.jpg" class="img-responsive" alt="">
+                                <div class="portfolio-thumb criteria-img">
+                                    <img src="images/tag/1.jpg" class="img-responsive" alt="">
+                                    <h2 class="criteria-text">Volume</h2>
                                 </div>
                                 <div class="portfolio-view">
                                     <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/1.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        
+                                        <li><a href="#"><i class="fa fa-volume-down"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-smile-o"></i></a></li>
+                                        <li><a href="images/thankyou.jpg" data-lightbox="example-set"><i class="fa fa-volume-up"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
+                                <h2></h2>
                             </div>
                         </div>
                     </div>
@@ -160,35 +169,18 @@
                         <div class="portfolio-wrapper">
                             <div class="portfolio-single">
                                 <div class="portfolio-thumb">
-                                    <img src="images/portfolio/2.jpg" class="img-responsive" alt="">
+                                    <img src="images/tag/2.jpg" class="img-responsive" alt="">
+                                    <h2 class="criteria-text">Eye Contact</h2>
                                 </div>
                                 <div class="portfolio-view">
                                     <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/2.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h2>Sailing Vivamus</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design logos">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb">
-                                    <img src="images/portfolio/3.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/3.jpg"  data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        <li><a href="portfolio-details.html"><i class="fa fa-thumbs-down"></i></a></li>
+                                        <li><a href="images/portfolio/2.jpg" data-lightbox="example-set"><i class="fa fa-thumbs-up"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
+                                <h2></h2>
                             </div>
                         </div>
                     </div>
@@ -196,7 +188,28 @@
                         <div class="portfolio-wrapper">
                             <div class="portfolio-single">
                                 <div class="portfolio-thumb">
-                                    <img src="images/portfolio/4.jpg" class="img-responsive" alt="">
+                                    <img src="images/tag/3.jpg" class="img-responsive" alt="">
+                                    <h2 class="criteria-text">Content</h2>
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="portfolio-details.html"><i class="fa fa-long-arrow-up"></i></a></li>
+                                        <li><a href="portfolio-details.html"><i class="fa fa-smile-o"></i></a></li>
+                                        <li><a href="images/portfolio/3.jpg"  data-lightbox="example-set"><i class="fa fa-long-arrow-down"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                      		<div class="portfolio-info ">
+                                <h2></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design logos">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="images/tag/4.jpg" class="img-responsive" alt="">
+                                    <h2 class="criteria-text">Body Gesture</h2>
                                 </div>
                                 <div class="portfolio-view">
                                     <ul class="nav nav-pills">
@@ -205,8 +218,8 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
+          					<div class="portfolio-info ">
+                                <h2></h2>
                             </div>
                         </div>
                     </div>
@@ -214,7 +227,8 @@
                         <div class="portfolio-wrapper">
                             <div class="portfolio-single">
                                 <div class="portfolio-thumb">
-                                    <img src="images/portfolio/5.jpg" class="img-responsive" alt="">
+                                    <img src="images/tag/5.jpg" class="img-responsive" alt="">
+                                    <h2 class="criteria-text">Time Control</h2>
                                 </div>
                                 <div class="portfolio-view">
                                     <ul class="nav nav-pills">
@@ -223,16 +237,18 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
+                           	<div class="portfolio-info ">
+                                <h2></h2>
                             </div>
+                            
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded mockup">
                         <div class="portfolio-wrapper">
                             <div class="portfolio-single">
                                 <div class="portfolio-thumb">
-                                    <img src="images/portfolio/6.jpg" class="img-responsive" alt="">
+                                    <img src="images/tag/6.jpg" class="img-responsive" alt="">
+                                    <h2 class="criteria-text">Stammer</h2>
                                 </div>
                                 <div class="portfolio-view">
                                     <ul class="nav nav-pills">
@@ -242,7 +258,7 @@
                                 </div>
                             </div>
                             <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
+                                <h2></h2>
                             </div>
                         </div>
                     </div>
@@ -250,7 +266,8 @@
                         <div class="portfolio-wrapper">
                             <div class="portfolio-single">
                                 <div class="portfolio-thumb">
-                                    <img src="images/portfolio/7.jpg" class="img-responsive" alt="">
+                                    <img src="images/tag/7.jpg" class="img-responsive" alt="">
+                                    <h2 class="criteria-text">Shaky</h2>
                                 </div>
                                 <div class="portfolio-view">
                                     <ul class="nav nav-pills">
@@ -259,8 +276,8 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
+							<div class="portfolio-info ">
+                                <h2></h2>
                             </div>
                         </div>
                     </div>
@@ -268,7 +285,8 @@
                         <div class="portfolio-wrapper">
                             <div class="portfolio-single">
                                 <div class="portfolio-thumb">
-                                    <img src="images/portfolio/8.jpg" class="img-responsive" alt="">
+                                    <img src="images/tag/8.jpg" class="img-responsive" alt="">
+                                    <h2 class="criteria-text">...</h2>
                                 </div>
                                 <div class="portfolio-view">
                                     <ul class="nav nav-pills">
@@ -277,171 +295,16 @@
                                     </ul>
                                 </div>
                             </div>
+                            
                             <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
+                                <h2></h2>
                             </div>
+                            
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded logos">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb">
-                                    <img src="images/portfolio/9.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/9.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded mockup">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb">
-                                    <img src="images/portfolio/10.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/10.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design folio">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb">
-                                    <img src="images/portfolio/11.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/11.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded mockup">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb">
-                                    <img src="images/portfolio/12.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/12.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design mobile">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb">
-                                    <img src="images/portfolio/13.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/13.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design logos">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb">
-                                    <img src="images/portfolio/14.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/14.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded logos">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb">
-                                    <img src="images/portfolio/15.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/15.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded logos">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb">
-                                    <img src="images/portfolio/16.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/16.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="portfolio-info ">
-                                <h2>Sailing Vivamus</h2>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
-                <div class="portfolio-pagination">
-                    <ul class="pagination">
-                      <li><a href="#">left</a></li>
-                      <li><a href="#">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li class="active"><a href="#">3</a></li>
-                      <li><a href="#">4</a></li>
-                      <li><a href="#">5</a></li>
-                      <li><a href="#">6</a></li>
-                      <li><a href="#">7</a></li>
-                      <li><a href="#">8</a></li>
-                      <li><a href="#">9</a></li>
-                      <li><a href="#">right</a></li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -506,7 +369,7 @@
                                 <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
                             </div>
                             <div class="form-group">
-                                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
+                                <textarea name="message" id="message" required class="form-control" rows="8" placeholder="Your text here"></textarea>
                             </div>                        
                             <div class="form-group">
                                 <input type="submit" name="submit" class="btn btn-submit" value="Submit">
