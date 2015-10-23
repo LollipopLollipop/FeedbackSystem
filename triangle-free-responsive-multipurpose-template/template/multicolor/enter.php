@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection to MySQL database failed: " . $conn->connect_error . "\nThe  developer is notified with this problem. Sorry for the inconvenience!\n");
 	#error_log("Attendance System:\nAdding New Member: Connection to MySQL database failed!", 1, "dingz@andrew.cmu.edu");	
 } 
-$select_sql = "SELECT * FROM presenter_info WHERE id=".$pid.";";
+$select_sql = "SELECT * FROM presenter_info WHERE id='".$pid."';";
 $select_result = $conn->query($select_sql);
 $select_row = $select_result->fetch_assoc();
 $presenter = $select_row["presenter_name"];
