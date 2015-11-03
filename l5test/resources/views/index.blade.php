@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="_token" content="{!! csrf_token() !!}"/>
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap-theme.min.css">
@@ -127,7 +128,7 @@
         </div>
     </header>
     <!--/#header-->
-
+	<div id="main-container">
     <section id="home-slider">
         <div class="container">
             <div class="row">
@@ -143,358 +144,110 @@
                     <img src="images/home/slider/sun.png" class="slider-sun" alt="slider image">
                     <img src="images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
                     <img src="images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
-                    <!-- Modal -->
-                    <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title">New Presentation</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <label>Title</label>
-                                        <input id="title" class="form-control" placeholder="Enter presentation title">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Presenter</label>
-                                        <input id="presenter" class="form-control" placeholder="Enter presenter name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Criteria</label><br>
-                                        <input type="text" id="criteria" value="Volume,Gesture,Eye Contact,Time Control,Content" data-role="tagsinput"         />
-                                      	<!--<select multiple data-role="tagsinput" class="form-control" id="criteria">
-                                          <option value="Volume">Volume</option>
-                                          <option value="Eye Contact">Eye Contact</option>
-                                          <option value="Gesture">Gesture</option>
-                                          <option value="Time Control">Time Control</option>
-                                          <option value="Content">Content</option>
-                                        </select>-->
-                                   	</div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" id="createBtn">Create</button>
-                                </div>
-                            </div>
-                            <!-- /.modal-content -->
-                        </div>
-                        <!-- /.modal-dialog -->
-                    </div>
-                    <!-- /.modal -->
-                    
-                    <!-- Modal -->
-                    <div class="modal fade" id="createSuccessModal" tabindex="-1" role="dialog" aria-labelledby="createSuccessModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title">Success</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <!--<div class="col-sm-3 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">-->
-                                        <div class="feature-inner">
-                                            <div class="icon-wrapper">
-                                                <i class="fa fa-2x fa-check-square-o"></i>
-                                            </div>
-                                            <h2 id="pid"></h2>
-                                            <p>Audience can enter your presentation based on the ID shown above</p>
-                                        </div>
-                                    <!--</div>-->
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" id="createDoneBtn">OK</button>
-                                </div>
-                            </div>
-                            <!-- /.modal-content -->
-                        </div>
-                        <!-- /.modal-dialog -->
-                    </div>
-                    <!-- /.modal -->
-                    
-                    <!-- Modal -->
-                    <div class="modal fade" id="enterModal" tabindex="-1" role="dialog" aria-labelledby="enterModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title">Enter Presentation</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <label>Presentation ID</label>
-                                        <input id="enterPID" class="form-control" placeholder="Enter presentation ID">
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" id="enterBtn">Confirm</button>
-                                </div>
-                            </div>
-                            <!-- /.modal-content -->
-                        </div>
-                        <!-- /.modal-dialog -->
-                    </div>
-                    <!-- /.modal -->
-                    
-                    
+  
                 </div>
             </div>
         </div>
         <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
     </section>
     <!--/#home-slider-->
+    </div>
     
-    <section id="page-breadcrumb" style="display:none;">
-        <div class="vertical-center sun">
-             <div class="container">
-                <div class="row">
-                    <div class="action">
-                        <div class="col-sm-12">
-                            <h1 class="title" id="fd-title">Presenter Defined Tags</h1>
-                            <p id="fd-session">Be Attentive</p>
-                            <p id="fd-presenter">Be Attentive</p>
-                        </div>
+    <!-- Modal -->
+    <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">New Presentation</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input id="title" class="form-control" placeholder="Enter presentation title">
+                    </div>
+                    <div class="form-group">
+                        <label>Presenter</label>
+                        <input id="presenter" class="form-control" placeholder="Enter presenter name">
+                    </div>
+                    <div class="form-group">
+                        <label>Criteria</label><br>
+                        <input type="text" id="criteria" value="Volume,Gesture,Eye Contact,Time Control,Content" data-role="tagsinput"         />
+                        <!--<select multiple data-role="tagsinput" class="form-control" id="criteria">
+                          <option value="Volume">Volume</option>
+                          <option value="Eye Contact">Eye Contact</option>
+                          <option value="Gesture">Gesture</option>
+                          <option value="Time Control">Time Control</option>
+                          <option value="Content">Content</option>
+                        </select>-->
                     </div>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="createBtn">Create</button>
+                </div>
             </div>
+            <!-- /.modal-content -->
         </div>
-   </section>
-    <!--/#action-->
-
-    <section id="portfolio" style="display:none;">
-        <div class="container">
-            <div class="row">
-                <br>
-                <br>
-                    
-                <div class="portfolio-items">
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded logos" style="display:none;">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                                    <img src="images/tag/1.jpg" class="img-responsive" alt="">
-                                    <h2 class="criteria-text" id="tag0">Volume</h2>
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        
-                                        <li><a href="#"><i class="fa fa-volume-down"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-smile-o"></i></a></li>
-                                        <li><a href="images/thankyou.jpg" data-lightbox="example-set"><i class="fa fa-volume-up"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="portfolio-info ">
-                                <h2></h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded folio" style="display:none;">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                                    <img src="images/tag/2.jpg" class="img-responsive" alt="">
-                                    <h2 class="criteria-text" id="tag1">Eye Contact</h2>
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="images/thankyou.jpg" class="thumbs-down" data-lightbox="example-set"><i class="fa fa-thumbs-down"></i></a></li>
-                                        <li><a href="images/thankyou.jpg" data-lightbox="example-set"><i class="fa fa-thumbs-up"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="portfolio-info ">
-                                <h2></h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design logos" style="display:none;">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                                    <img src="images/tag/3.jpg" class="img-responsive" alt="">
-                                    <h2 class="criteria-text" id="tag2">Content</h2>
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-long-arrow-up"></i></a></li>
-                                        <li><a href="portfolio-details.html"><i class="fa fa-smile-o"></i></a></li>
-                                        <li><a href="images/portfolio/3.jpg"  data-lightbox="example-set"><i class="fa fa-long-arrow-down"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                      		<div class="portfolio-info ">
-                                <h2></h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design logos" style="display:none;">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                                    <img src="images/tag/4.jpg" class="img-responsive" alt="">
-                                    <h2 class="criteria-text" id="tag3">Body Gesture</h2>
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/4.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-          					<div class="portfolio-info ">
-                                <h2></h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded mobile" style="display:none;">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                                    <img src="images/tag/5.jpg" class="img-responsive" alt="">
-                                    <h2 class="criteria-text" id="tag4">Time Control</h2>
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/5.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                           	<div class="portfolio-info ">
-                                <h2></h2>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded mockup" style="display:none;">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                                    <img src="images/tag/6.jpg" class="img-responsive" alt="">
-                                    <h2 class="criteria-text" id="tag5">Stammer</h2>
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/6.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="portfolio-info ">
-                                <h2></h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded folio" style="display:none;">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                                    <img src="images/tag/7.jpg" class="img-responsive" alt="">
-                                    <h2 class="criteria-text" id="tag6">Shaky</h2>
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/7.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-							<div class="portfolio-info ">
-                                <h2></h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design logos" style="display:none;">
-                        <div class="portfolio-wrapper">
-                            <div class="portfolio-single">
-                                <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                                    <img src="images/tag/8.jpg" class="img-responsive" alt="">
-                                    <h2 class="criteria-text" id="tag7">...</h2>
-                                </div>
-                                <div class="portfolio-view">
-                                    <ul class="nav nav-pills">
-                                        <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
-                                        <li><a href="images/portfolio/8.jpg#" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="portfolio-info ">
-                                <h2></h2>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
-    </section>
-    <!--/#portfolio-->
-    <section id="streaming" style="display:none">
-    <div class="container">
-    	<div id="progressbar-container" class="wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2 class="page-header" id="stream-title">Progress Bars</h2>
-            <div class="progress" style="display:none">
-            	<strong class="progress-label" id="progress-tag0"></strong>
-                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                    40% Complete (success)
-                </div>
-            </div>
-            <div class="progress" style="display:none">
-            	<strong class="progress-label" id="progress-tag1"></strong>
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                    20% Complete
-                </div>
-            </div>
-            <div class="progress" style="display:none">
-            	<strong class="progress-label" id="progress-tag2"></strong>
-                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    60% Complete (warning)
-                </div>
-            </div>
-            <div class="progress" style="display:none">
-            	<strong class="progress-label" id="progress-tag3"></strong>
-                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                    80% Complete
-                </div>
-            </div>
-            
-            <div class="progress" style="display:none">
-            	<strong class="progress-label" id="progress-tag4"></strong>
-                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                    40% Complete (success)
-                </div>
-            </div>
-            <div class="progress" style="display:none">
-            	<strong class="progress-label" id="progress-tag5"></strong>
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                    20% Complete
-                </div>
-            </div>
-            <div class="progress" style="display:none">
-            	<strong class="progress-label" id="progress-tag6"></strong>
-                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    60% Complete (warning)
-                </div>
-            </div>
-            <div class="progress" style="display:none">
-            	<strong class="progress-label" id="progress-tag7"></strong>
-                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                    80% Complete
-                </div>
-            </div>
-            
-        </div><!--/#progressbar-container-->
-        <div class="container">
-	</section>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
     
-
-
+    <!-- Modal -->
+    <div class="modal fade" id="createSuccessModal" tabindex="-1" role="dialog" aria-labelledby="createSuccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Success</h4>
+                </div>
+                <div class="modal-body">
+                    <!--<div class="col-sm-3 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">-->
+                        <div class="feature-inner">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-2x fa-check-square-o"></i>
+                            </div>
+                            <h2 id="pid"></h2>
+                            <p>Audience can enter your presentation based on the ID shown above</p>
+                        </div>
+                    <!--</div>-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="createDoneBtn">OK</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    
+    <!-- Modal -->
+    <div class="modal fade" id="enterModal" tabindex="-1" role="dialog" aria-labelledby="enterModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Enter Presentation</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Presentation ID</label>
+                        <input id="enterPID" class="form-control" placeholder="Enter presentation ID">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="enterBtn">Confirm</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+                    
+                    
     <footer id="footer">
         <div class="container">
             <div class="row">
@@ -584,34 +337,52 @@
     <script type="text/javascript" src="js/wow.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>   
     <script>
+
 	$(document).ready(function(){
+		$.ajaxSetup({
+   			headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+		});
+	
 		$('#createBtn').click(function(){
-			// Create our XMLHttpRequest object
-			var hr = new XMLHttpRequest();
-			// Create some variables we need to send to our PHP file
-			var url = "createNew.php";
+			alert("click detect");
 			var title = $('#title').val();
 			var presenter = $('#presenter').val();
 			var criteria = $("#criteria").val();
-
-			var vars = "title="+title+"&presenter="+presenter+"&criteria="+criteria;
-			hr.open("POST", url, true);
-			// Set content type header information for sending url encoded variables in the request
-			hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-			// Access the onreadystatechange event for the XMLHttpRequest object
-			hr.onreadystatechange = function() {
-				if(hr.readyState == 4 && hr.status == 200) {
-					var return_data = hr.responseText;
-					$('#createModal').modal('hide'); 
-					$('#pid').html(return_data);
-					$('#createSuccessModal').modal('show'); 
-				}
-			}
-			// Send the data to PHP now... and wait for response to update the status div
-			hr.send(vars); // Actually execute the request
 			
+			$.ajax({
+    			url: 'create',
+    			type: 'POST',
+    			data: {'title': title, 'presenter':presenter, 'criteria':criteria},
+    			success: function (data) {
+					alert("success");
+        			$('#createModal').modal('hide'); 
+					$('#pid').html(data);
+					$('#createSuccessModal').modal('show');
+    			}
+			});
 			
 		});
+		
+		$('#createDoneBtn').click(function(){
+			//$('#createSuccessModal').modal('hide'); 
+			//$('#home-slider').hide();
+			var title = $('#title').val();
+			var criteria = $("#criteria").val();
+			var pid = $('#pid').html();
+			
+			$.ajax({
+    			url: 'presenter',
+    			type: 'GET',
+    			data: {'title': title, 'pid':pid, 'criteria':criteria},
+    			success: function (data) {
+					alert("success");
+					$('#main-container').html(data);
+    			}
+			});
+			
+					
+		});
+		
 		
 		$('#enterBtn').click(function(){
 			// Create our XMLHttpRequest object
@@ -653,23 +424,7 @@
 			
 		});
 		
-		$('#createDoneBtn').click(function(){
-			$('#createSuccessModal').modal('hide'); 
-			$('#home-slider').hide();
-			var title = $('#title').val();
-			var criteria = $("#criteria").val();
-			$('#stream-title').html(title);
-			var tags = criteria.split(",");
-			var tagNum = tags.length;
-			for (var i = 0; i < tagNum; i++) {
-				$('#progress-tag'+i).html(tags[i]);
-				$('#progress-tag'+i).parent().show();
-				//Do something
-			}
-			$('#streaming').show();
-			
-			
-		});
+		
 		
 		$(".thumbs-down").click(function(){
 			//alert("thumbs-down");

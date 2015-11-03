@@ -54,10 +54,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'feedbacksys'),
-            'username'  => env('DB_USERNAME', 'ding'),
-            'password'  => env('DB_PASSWORD', '151015'),
+            'host'      => 'localhost',
+            'database'  => 'feedbacksys',
+            'username'  => 'ding',
+            'password'  => '151015',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
