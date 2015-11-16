@@ -23,6 +23,15 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
+    <style>
+	.criteria-text { 
+	   position: absolute; 
+	   text-align:center; 
+	   top: 100px; 
+	   width: 100%; 
+	}
+	</style>
+    
 
 <body>
 	<header id="header">      
@@ -130,51 +139,23 @@
                     <div class="col-md-3 col-sm-4">
                         <div class="single-blog two-column">
                             <div class="post-thumb">
-                                <a href="blogdetails.html"><img src="images/blog/masonary/1.jpg" class="img-responsive" alt=""></a>
+                                <a href="blogdetails.html">
+                                    <div style="width:261px; height:269px; padding:50px;" class="frameimg img-responsive">
+                                        <div style="width:161px; height:169px;" class="bgimg img-responsive"> 
+                                        </div>
+                                    </div>
+                                    <h2 class="criteria-text">hello</h2>
+                                    <div class="framecolor" >#af83e5</div>
+                                    <div class="bgcolor" >#ffffff</div>
+                                </a>
                                 <div class="post-overlay">
-                                    <span class="uppercase"><a href="#">14 <br><small>Feb</small></a></span>
+                                    <span class=""><a href="#"><i class="fa fa-hand-o-up"></i></a></span>
                                 </div>
                             </div>
-                            <div class="post-content overflow">
-                                <ul class="nav nav-justified post-nav">
-                                    <li><a href="#"><i class="fa fa-tag"></i>Creative</a></li>
-                                </ul>
-                                <h2 class="post-title bold"><a href="blogdetails.html">Advanced business cards design</a></h2>
-                                <h3 class="post-author"><a href="#">Posted by micron News</a></h3>
-                                <p>Duis autem vel eum iriure dolor in hendrerit in blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber [...]</p>
-                                <a href="#" class="read-more">View More</a>
-                                <div class="post-bottom overflow">
-                                    <ul class="nav nav-justified post-nav">
-                                        <li><a href="#"><i class="fa fa-heart"></i>32 Love</a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i>3 Comments</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4">
-                        <div class="single-blog two-column">
-                            <div class="post-thumb">
-                                <audio src="audio/juicy.mp3" preload="auto"></audio>
-                            </div>
-                            <div class="post-content overflow">
-                                <ul class="nav nav-justified post-nav">
-                                    <li><a href="#"><i class="fa fa-tag"></i>Creative</a></li>
-                                    <li><a href="#"><i class="fa fa-clock-o"></i>14 Feb</a></li>
-                                </ul>
-                                <h2 class="post-title bold"><a href="blogdetails.html">Advanced business cards design</a></h2>
-                                <h3 class="post-author"><a href="#">Posted by micron News</a></h3>
-                                <p>Duis autem vel eum iriure dolor in hendrerit in blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber [...]</p>
-                                <a href="#" class="read-more">View More</a>
-                                <div class="post-bottom overflow">
-                                    <ul class="nav nav-justified post-nav">
-                                        <li><a href="#"><i class="fa fa-heart"></i>32 Love</a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i>3 Comments</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="col-md-3 col-sm-4">
                         <div class="single-blog two-column">
                             <div class="post-thumb">
@@ -491,6 +472,21 @@
       audiojs.events.ready(function() {
         var as = audiojs.createAll();
       });
+        
+       
+
+	$(document).ready(function(){
+        $('.post-thumb').each(function(){
+            var fcolor = $(this).find('.framecolor').html();
+            var bcolor = $(this).find('.bgcolor').html();
+            alert(fcolor);
+            alert(bcolor);
+            $(this).find('.frameimg').css('background-color', fcolor);
+            $(this).find('.bgimg').css('background-color', bcolor);
+            
+        });
+    });	
+    
     </script>
     <script type="text/javascript" src="js/masonry.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>    

@@ -15,7 +15,6 @@
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
     <link href="bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
-	
     <!--[if lt IE 9]>
 	    <script src="js/html5shiv.js"></script>
 	    <script src="js/respond.min.js"></script>
@@ -128,7 +127,7 @@
     </header>
     <!--/#header-->
 
-    <section id="home-slider">
+    <section id="home-slider" style="display:none">
         <div class="container">
             <div class="row">
                 <div class="main-slider">
@@ -245,7 +244,7 @@
     </section>
     <!--/#home-slider-->
     
-    <section id="page-breadcrumb" style="display:none;">
+    <section id="page-breadcrumb">
         <div class="vertical-center sun">
              <div class="container">
                 <div class="row">
@@ -262,18 +261,43 @@
    </section>
     <!--/#action-->
 
-    <section id="portfolio" style="display:none;">
+    <section id="portfolio">
         <div class="container">
             <div class="row">
                 <br>
-                <br>
-                    
+                <br>    
                 <div class="portfolio-items">
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded logos" style="display:none;">
+                    <div class="post-thumb">
+                                    <a href="#"><img src="images/blog/7.jpg" class="img-responsive" alt=""></a>
+                                    <div class="post-overlay">
+                                        <span class="uppercase"><a href="#">14 <br><small>Feb</small></a></span>
+                                    </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded logos">
                         <div class="portfolio-wrapper">
                             <div class="portfolio-single">
                                 <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                                    <img src="images/tag/1.jpg" class="img-responsive" alt="">
+                                    <div style="background-color:#cb904d; width:261px; height:269px; padding:50px;" class="img-responsive">
+                                	   <div style="background-color:#000000; width:161px; height:169px;" class="img-responsive"></div>
+                                    </div>
+                                    <h2 class="criteria-text" id="tag0">Volume</h2>
+                                </div>
+                                <div class="portfolio-view" style="margin: auto auto; text-align:center">
+                                    <a href="#"><i class="fa fa-volume-down fa-5x"></i></a>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded logos">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                                    <div style="background-color:#cb904d; width:261px; height:269px; padding:50px;" class="img-responsive">
+                                	   <div style="background-color:#000000; width:161px; height:169px;" class="img-responsive"></div>
+                                    </div>
                                     <h2 class="criteria-text" id="tag0">Volume</h2>
                                 </div>
                                 <div class="portfolio-view">
@@ -290,7 +314,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded folio" style="display:none;">
+                    
+                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded folio">
                         <div class="portfolio-wrapper">
                             <div class="portfolio-single">
                                 <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
@@ -309,7 +334,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design logos" style="display:none;">
+                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design logos">
                         <div class="portfolio-wrapper">
                             <div class="portfolio-single">
                                 <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
@@ -329,7 +354,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design logos" style="display:none;">
+                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item design logos">
                         <div class="portfolio-wrapper">
                             <div class="portfolio-single">
                                 <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
@@ -348,7 +373,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded mobile" style="display:none;">
+                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded mobile">
                         <div class="portfolio-wrapper">
                             <div class="portfolio-single">
                                 <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
@@ -368,7 +393,7 @@
                             
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded mockup" style="display:none;">
+                    <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded mockup">
                         <div class="portfolio-wrapper">
                             <div class="portfolio-single">
                                 <div class="portfolio-thumb wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
@@ -582,11 +607,64 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
     <script type="text/javascript" src="js/lightbox.min.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>   
-    <script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+<script type="text/javascript">
+
+function pop(){
+alert("test function");
+}
+
+//==============================================================       
+/*         function getFB(tags, tagNum){
+alert("run getFB alright");
+                var hr_fb = new XMLHttpRequest();
+                //inside enter.php part of code, part of code is inside tag.show loop
+                //call feedback_detail.php and pass params to php
+                var feedback_url = "update_feedback.php”;
+                var feedback_var = “num=“+tagNum + “&pid=“+pid;
+                for (var i = 0; i < tagNum; i++) {
+                        feedback_var += “&param” + i + “=” + tags[i];
+                }
+alert("open feedback.php");
+                hr_fb.open("POST", url, true);
+alert("open php alright");
+
+                hr_fb.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        
+                hr_fb.onreadystatechange = function() {
+                        if(hr.readyState == 4 && hr.status == 200) {
+                        var re_result = hr_fb.responseText;
+                        var result_array = JSON.parse(re_result);
+alert("get return data alright");
+                        //do something here
+
+                                
+                        for (var i = 0; i < tagNum; i++) {
+                                $('#progress-tag'+i).html(tags[i]);
+                                $('#progress-tag'+i).parent().show();
+                                //updating progress-bar part one-by-one, array[tagNum][0](stores total positive fb)$('')
+                                //Do something
+                        }
+                        $('#streaming').show();
+                                        //Do something
+                        }
+                        
+        
+                }
+
+                hr_fb.send(feedback_var); // Actually execute the request
+                alert("waiting");
+                        
+         
+        }
+*/        
+//============================================================================
+
+        
 	$(document).ready(function(){
 		$('#createBtn').click(function(){
-			// Create our XMLHttpRequest object
+		// Create our XMLHttpRequest object
 			var hr = new XMLHttpRequest();
 			// Create some variables we need to send to our PHP file
 			var url = "createNew.php";
@@ -636,6 +714,7 @@
 					$('#fd-session').html(pid);
 					var tags = return_data[2].split(",");
 					var tagNum = tags.length;
+			
 					for (var i = 0; i < tagNum; i++) {
     					$('#tag'+i).html(tags[i]);
 						$('#tag'+i).parent().parent().parent().parent().show();
@@ -653,7 +732,7 @@
 			
 		});
 		
-		$('#createDoneBtn').click(function(){
+		/*$('#createDoneBtn').click(function(){
 			$('#createSuccessModal').modal('hide'); 
 			$('#home-slider').hide();
 			var title = $('#title').val();
@@ -661,15 +740,24 @@
 			$('#stream-title').html(title);
 			var tags = criteria.split(",");
 			var tagNum = tags.length;
+
+//==========================================================================
+//alert("before getFB");
+			getFB_test(tags, tagNum);
+//alert("after get FB");
+			setInterval(function(){getFB(tags,tagNum)};,10000);
+//==========================================================================
+  
 			for (var i = 0; i < tagNum; i++) {
 				$('#progress-tag'+i).html(tags[i]);
 				$('#progress-tag'+i).parent().show();
 				//Do something
 			}
+ 
 			$('#streaming').show();
 			
 			
-		});
+		});*/
 		
 		$(".thumbs-down").click(function(){
 			//alert("thumbs-down");
@@ -702,7 +790,7 @@
 			
 		});
 		
-	});	
-	</script>
-</body>
+	});
+</script>
+   </body>
 </html>
